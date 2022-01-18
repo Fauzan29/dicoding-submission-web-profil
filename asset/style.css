@@ -1,0 +1,444 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kufam:wght@500&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Baloo+2&family=Markazi+Text:wght@600&family=Suez+One&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;;
+}
+
+body{
+    font-family: 'Baloo 2', cursive;
+    overflow-x: hidden;
+    position: relative;  
+    background-color: rgba(218, 186, 255, 0.952);
+}
+
+header .jumbotron img{
+    width: 100%;
+    height: auto;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    background-color: rgba(146, 69, 235, 0.952);
+    color: white;
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+nav .logo{
+    font-family: 'Kufam', cursive;
+    letter-spacing: 3.5px;
+    font-size: 1.25em;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    width: 30%;
+    justify-content: space-between;
+}
+
+nav ul li a{
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: yellow;
+    font-weight: bold;   
+}
+
+/* Hamburger Menu */
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input{
+    position: absolute;
+    width: 38px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: whitesmoke;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* Roti Menu Animation */
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px, 0) ;
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    transform: scale(0);
+    opacity: 0;
+}
+
+/* ------ main-------- */
+main {
+    display: flex;
+}
+
+main #content{
+    box-sizing: border-box;
+    text-align: justify;
+    line-height: 1.8em;
+    flex: 3;
+    padding: 15px;
+    justify-content: center;
+    background-color: rgba(198, 148, 255, 0.952);
+}
+
+main #tentangsaya{
+    order: 1;
+}
+
+main #content{
+    order: 2;
+}
+
+main #informasi{
+    order: 3;
+}
+ 
+main aside{
+    flex: 1;
+    padding: 15px;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(198, 148, 255, 0.952);
+}
+
+main aside table{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+main aside img{
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+    border-radius: 9px;
+}
+
+footer {
+    padding: 20px;
+    color: white;
+    background-color: rgba(146, 69, 235, 0.952);
+    text-align: center;
+    font-weight: bold;
+ }
+
+.card {
+    box-shadow: 1px 0.5px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-top: 15px;
+    border-radius: 5px;
+    padding: 20px;
+ }
+
+h1, h2, h3{
+    color:  #0c0000;
+    font-family: 'Suez One', serif;
+    font-size: 1.2em;
+}
+
+
+   
+  
+.featured-image {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+ } 
+
+  table, tr, td {
+    border-collapse: collapse; 
+    padding: 5px; 
+ }
+
+.judul{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.album{
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     width: 80%;
+     height: 250px;
+     text-align: center;
+     margin : 0 auto;
+   
+ }
+
+ .album .gambar{
+     width: 200px;
+     height: 200px;
+     border-radius: 20%;
+     line-height: 365px;
+     font-family: cursive;
+     font-weight: bold;
+     font-size: 17px;
+     color: purple;
+     text-shadow: 1px 1px 1px #ddd;
+     transition: 1s;
+ }
+
+.album .gambar:hover{
+     transform: scale(1.2);
+ }
+
+.gambar1{
+     background-image: url(../img/galeri/cacaban.jpg);
+ }
+
+.gambar2{
+    background-image: url(../img/galeri/danawarih.jpg);
+}
+
+.gambar3{
+    background-image: url(../img/galeri/bukitgoa.jpg);
+}
+
+.gambar4{
+    background-image: url(../img/galeri/danubeko.jpg);
+}
+
+
+
+
+@media screen and (max-width: 1200px){
+    nav{
+        width: 100%;
+    }
+    nav ul{
+        width: 40%;
+    }
+
+    main{
+        display: inline-block;
+    }
+
+    aside{
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    aside table{
+        margin-top: 5px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .album{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 850px){
+    nav{
+        width: 100%;
+    }
+    
+   
+    main{
+        display: inline-block;
+    }
+
+    aside{
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    aside table{
+        margin-top: 5px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .album{
+        display: inline;
+        justify-content: space-between;
+    }
+
+    .album .gambar{
+        margin: 20px auto;
+    }
+
+}
+
+/* Ukuran Tablet */
+@media screen and (max-width: 768px){
+
+    nav{
+        width: 100%;
+    }
+
+    .menu-toggle{
+        display: flex;
+        z-index: 1;
+    }
+    
+    nav ul{
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(146, 69, 235, 0.952);
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all .1s;
+        opacity: 0;
+    }
+
+    nav ul.slide {
+        z-index: 1; 
+        opacity: 0.8;
+        transform: translateX(0);
+    }
+
+    main{
+        display: inline-block;
+    }
+
+    aside{
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    aside table{
+        margin-top: 5px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .album{
+        display: inline;
+        justify-content: space-between;
+    }
+
+    .album .gambar{
+        margin: 20px auto;
+    }
+  
+}
+
+/* Ukuran mobile */
+@media screen and (max-width: 576px){
+
+    nav{
+        width: 100%;
+    }
+
+    .menu-toggle{
+        display: flex;
+        z-index: 1;
+    }
+    
+    nav ul{
+        /* display: none; */
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(146, 69, 235, 0.952);
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all .1s;
+        opacity: 0;
+    }
+
+    nav ul.slide {
+        z-index: 1; 
+        opacity: 0.8;
+        transform: translateX(0);
+    }
+    
+    main{
+        display: inline-block;
+    }
+
+    aside{
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    aside table{
+        margin-top: 5px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .album{
+        display: inline;
+        justify-content: space-between;
+    }
+
+    .album .gambar{
+        margin: 20px auto;
+    }
+
+}
+
+
